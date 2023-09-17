@@ -4,57 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hunter Hasenfus' Portfolio</title>
+    <title>Hunter's Portfolio</title>
     <style>
         /* Basic styles for the page */
         body {
             font-family: Arial, sans-serif;
             padding: 20px;
-            text-align: center;
+            display: flex;  /* Use flexbox to align content side by side */
+            align-items: center;  /* Vertically center the content */
+            justify-content: center;  /* Horizontally center the content */
+            height: 100vh;  /* Use full viewport height */
         }
 
-        img {
-            width: 200px;
-            height: auto;
-            border-radius: 50%;
-            margin-top: 20px;
+        .profile-image {
+            flex: 1;  /* Take up 1/3 of the container width */
+            margin-right: 20px;  /* Space between image and text */
         }
 
-        footer {
-            margin-top: 40px;
+        .profile-image img {
+            max-width: 100%;  /* Ensure the image doesn't overflow its container */
+            border-radius: 10px;  /* Optional rounded corners for the image */
         }
 
-        a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #0077b5; /* LinkedIn blue color, can be changed */
+        .bio {
+            flex: 2;  /* Take up 2/3 of the container width */
+            text-align: left;  /* Align text to the left */
         }
+
     </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Your Name</h1>
-        <p>Optional Tagline or Position</p>
-    </header>
-
-    <main>
+    <div class="profile-image">
         <!-- Your image -->
-        <img src="profilepicture_HMH copy.png" alt="Your Name">
+        <img src="profilepicture_HMH copy.png” alt="Hunter">
+    </div>
 
+    <div class="bio">
         <!-- Your bio -->
-        <p>
-            [Your Bio Here]
-        </p>
-    </main>
-
-    <footer>
-        <!-- Links to your CV, LinkedIn, and GitHub -->
+        <p>Hello! I'm Hunter, a senior at the University of Massachusetts: Lowell. My deep-seated fascination revolves around the nature of mathematics, information processing, and intelligent agents. There's a certain allure in understanding the core essence of these subjects that has held me captivated throughout my academic journey.</p>
+        
+        <p>We're at a pivotal moment in human existence, where the confluence of technology and knowledge is reshaping what it means to be human. Recognizing the magnitude of this era, I am fueled with an ambition to lead, to unearth truths, to seek beauty in complexity, and to propagate kindness. I aim to contribute to a future where science and compassion coexist.</p>
+    
         <a href="HMH_Resume copy.pdf" target="_blank">CV</a>
         <a href="https://www.linkedin.com/in/HunterHasenfus/" target="_blank">LinkedIn</a>
         <a href="https://github.com/Hasenfus" target="_blank">GitHub</a>
-    </footer>
+    </div>
 
 </body>
 
