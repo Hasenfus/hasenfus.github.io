@@ -19,22 +19,27 @@
             margin: 0 auto;
             padding: 15px;
         }
-        h1, h2 {
-            color: #2c3e50;
-        }
         #dhead {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
+            text-align: center;
+            margin-bottom: 40px;
         }
         .profile-pic {
-            width: 150px;
-            height: 150px;
+            width: 450px;
+            height: 450px;
             border-radius: 50%;
-            margin-right: 20px;
+            margin-bottom: 20px;
         }
-        #dhead-content {
-            flex-grow: 1;
+        h1, h2 {
+            margin: 10px 0;
+            color: #2c3e50;
+        }
+        #dico {
+            margin-top: 10px;
+        }
+        #dico a, #dico span {
+            margin: 0 10px;
+            color: #3498db;
+            text-decoration: none;
         }
         .section {
             background-color: white;
@@ -45,20 +50,20 @@
         }
         .timeline {
             position: relative;
+            padding-left: 100px;
         }
-        .timeline::after {
+        .timeline::before {
             content: '';
             position: absolute;
             width: 2px;
             background-color: #3498db;
             top: 0;
             bottom: 0;
-            left: 20px;
+            left: 100px;
         }
         .timeline-container {
-            padding-left: 40px;
             position: relative;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         .timeline-container::before {
             content: '';
@@ -67,19 +72,28 @@
             height: 10px;
             background-color: #3498db;
             border-radius: 50%;
-            left: 16px;
+            left: -6px;
             top: 5px;
+        }
+        .timespan {
+            position: absolute;
+            left: -100px;
+            width: 80px;
+            text-align: right;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .ico {
+            position: absolute;
+            right: -50px;
+            top: 0;
         }
         .ico img {
             width: 32px;
             height: 32px;
-            position: absolute;
-            left: 5px;
-            top: 0;
         }
-        .timespan {
-            font-weight: bold;
-            color: #2c3e50;
+        .desc {
+            padding-right: 60px;
         }
         .project, .paper-item {
             display: flex;
@@ -115,7 +129,7 @@
 <body>
     <div class="container">
         <div id="dhead">
-            <img src="pp_hmh.png" alt="Hunter Hasenfus" class="profile-pic">
+            <img src="pp.jpeg" alt="Hunter Hasenfus" class="profile-pic">
             <div id="dhead-content">
                 <h1>Hunter M Hasenfus</h1>
                 <h2>Builder of blocks, thinker of thoughts</h2>
@@ -222,13 +236,9 @@
             <h2>Blog Posts</h2>
             <div class="blog-list">
                 <div class="blog-post">
-                <h3 class="blog-title">My First Blog Post</h3>
-                <p class="blog-date">September 15, 2024</p>
-                <div class="blog-excerpt">
-                    <p>This is an excerpt from my first blog post. It introduces the topic and gives a brief overview of what the full post will cover.</p>
-                </div>
-                <a href="blog-posts/ello-traveler.html" class="read-more">Read More</a>
-            </div>            </div>
+                <a href="blog-posts/ello-traveler.html" class="blog-title">My First Blog Post</a> <p class="blog-date">September 15, 2024</p>
+            </div>            
+            </div>
         </section>
 
 
