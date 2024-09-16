@@ -24,8 +24,8 @@
             margin-bottom: 40px;
         }
         .profile-pic {
-            width: 450px;
-            height: 450px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             margin-bottom: 20px;
         }
@@ -51,6 +51,7 @@
         .timeline {
             position: relative;
             padding-left: 100px;
+            padding-right: 120px; /* Space for images */
         }
         .timeline::before {
             content: '';
@@ -64,6 +65,8 @@
         .timeline-container {
             position: relative;
             margin-bottom: 30px;
+            display: flex;
+            align-items: flex-start;
         }
         .timeline-container::before {
             content: '';
@@ -83,14 +86,19 @@
             font-weight: bold;
             color: #2c3e50;
         }
+        .content {
+            flex-grow: 1;
+        }
         .ico {
             position: absolute;
-            right: -50px;
+            right: -120px;
             top: 0;
+            width: 100px; /* Fixed width for all images */
         }
         .ico img {
-            width: 32px;
-            height: 32px;
+            width: 100%;
+            height: auto;
+            display: block;
         }
         .desc {
             padding-right: 60px;
@@ -127,116 +135,122 @@
     </style>
 </head>
 <body>
-    <div class="container">
+<div class="container">
         <div id="dhead">
             <img src="pp.jpeg" alt="Hunter Hasenfus" class="profile-pic">
-            <div id="dhead-content">
-                <h1>Hunter M Hasenfus</h1>
-                <h2>Builder of blocks, thinker of thoughts</h2>
-                <div id="dico">
-                    <a href="https://github.com/Hasenfus">GitHub</a> |
-                    <a href="https://www.linkedin.com/in/HunterHasenfus/">LinkedIn</a> |
-                    <a href="mailto:hasenfush@gmail.com">Email</a> |
-                    <span>+1(781)8314980</span>
-                </div>
+            <h1>Hunter M Hasenfus</h1>
+            <h2>Builder of blocks, thinker of thoughts</h2>
+            <div id="dico">
+                <a href="https://github.com/Hasenfus">GitHub</a>
+                <a href="https://www.linkedin.com/in/HunterHasenfus/">LinkedIn</a>
+                <a href="mailto:hasenfush@gmail.com">Email</a>
+                <span>+1(781)8314980</span>
             </div>
         </div>
 
-<section id="timeline">
-    <h2>Professional and Academic Timeline</h2>
-    <div class="timeline">
-        <div class="timeline-container left">
-            <div class="content">
-                <div class="timespan">2021 - 2024</div>
-                <div class="ico">
-                    <img src="uml.png" alt="UMass Lowell">
+    <div class="container">
+        <section id="timeline" class="section">
+            <h2>Professional and Academic Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-container">
+                    <div class="timespan">Sep 2023 - present</div>
+                    <div class="content">
+                        <div class="desc">
+                            <strong>Cofounder and CTO, Ticket Tree</strong><br>
+                            Building an on-chain ticketing system, memorializing experiences, providing verification, decentralization, and a better relationship between organizations and their fans.
+                        </div>
+                    </div>
+                    <div class="ico">
+                        <img src="tt.png" alt="Ticket Tree">
+                    </div>
                 </div>
-                <div class="desc">
-                    <strong>University of Massachusetts: Lowell</strong><br>
-                    B.S. Mathematics, B.S. Computer Science (GPA: 3.85/4.0)<br>
-                    Activities: Math club, Robotics club, Jiu Jitsu club
-                </div>
-            </div>
-        </div>
 
-        <div class="timeline-container right">
-            <div class="content">
-                <div class="timespan">Aug 2022 - Apr 2023</div>
-                <div class="desc">
-                    <strong>Honors Fellowship, Dr. Wang</strong><br>
-                    Utilized mixture models in conjunction with supervised learning models for predictive modeling of mental health.
-                    <a href="/projects/honors-fellowship" class="project-link">Learn More</a>
+                <div class="timeline-container">
+                    <div class="timespan">Aug 2023 - May 2024</div>
+                    <div class="content">
+                        <div class="desc">
+                            <strong>Multiple Concurrent Projects and Roles</strong><br>
+                            During this period, I was involved in several overlapping projects and roles:
+                            <ul>
+                                <li><strong>Research Assistant, UML Pearl Lab (Aug 2023 - Apr 2024):</strong> Trained and analyzed open-source multi-agent reinforcement learning algorithms focused on persistent autonomy in robotics with Pytorch and Tensorflow.</li>
+                                <li><strong>Honors Project with Dr. Ahmadzadeh (Aug 2023 - May 2024):</strong> Collaborated with PhD student, trained and tested multi-agent reinforcement learning models. Paper accepted into CDC apart of IEEE.</li>
+                                <li><strong>Mathematics Senior Seminar, Dr. Beke (Aug 2023 - Dec 2023):</strong> Developed understanding of combinatorial, categorical, computational perspectives of homology; wrote paper and presented project.</li>
+                            </ul>
+                            <a href="/projects/concurrent-2023-2024" class="project-link">Learn More About This Period</a>
+                        </div>
+                    </div>
+                    <div class="ico">
+                        <img src="pearl.png" alt="Multiple Projects">
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="timeline-container left">
-            <div class="content">
-                <div class="timespan">Sept 2022 - May 2023</div>
-                <div class="ico">
-                    <img src="se.png" alt="Schneider Electric">
+                <div class="timeline-container">
+                    <div class="timespan">Jun 2023 - Aug 2023</div>
+                    <div class="content">
+                        <div class="desc">
+                            <strong>Machine Learning Engineer, DoD NSIN X-Force</strong><br>
+                            Assigned to Georgia Tech Research Institute: CIPHER Division as part of Department of Defense - National Security Innovation Network's X-Force Program. [Deep learning, Graph neural networks]
+                            <a href="/projects/dod-xforce" class="project-link">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="ico">
+                        <img src="nin.png" alt="DoD">
+                    </div>
                 </div>
-                <div class="desc">
-                    <strong>Software Project for Schneider Electric</strong><br>
-                    Researched cryptographic algorithms, analyzed secure communication on Secure Element with Raspberry Pi, and tested methods on the company's control system units.
-                    <a href="/projects/schneider-electric" class="project-link">Learn More</a>
-                </div>
-            </div>
-        </div>
 
-        <div class="timeline-container right">
-            <div class="content">
-                <div class="timespan">Jun 2023 - Aug 2023</div>
-                <div class="ico">
-                    <img src="nin.png" alt="DoD">
+                <div class="timeline-container">
+                    <div class="timespan">Sept 2022 - May 2023</div>
+                    <div class="content">
+                        <div class="desc">
+                            <strong>Software Project for Schneider Electric</strong><br>
+                            Researched cryptographic algorithms, analyzed secure communication on Secure Element with Raspberry Pi, and tested methods on the company's control system units.
+                            <a href="/projects/schneider-electric" class="project-link">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="ico">
+                        <img src="se.png" alt="Schneider Electric">
+                    </div>
                 </div>
-                <div class="desc">
-                    <strong>Machine Learning Engineer, DoD NSIN X-Force</strong><br>
-                    Assigned to Georgia Tech Research Institute: CIPHER Division as part of Department of Defense - National Security Innovation Network's X-Force Program. [Deep learning, Graph neural networks]
-                    <a href="/projects/dod-xforce" class="project-link">Learn More</a>
-                </div>
-            </div>
-        </div>
 
-        <div class="timeline-container left">
-            <div class="content">
-                <div class="timespan">Aug 2023 - May 2024</div>
-                <div class="ico">
-                    <img src="pearl.png" alt="Multiple Projects">
+                <div class="timeline-container">
+                    <div class="timespan">Aug 2022 - Apr 2023</div>
+                    <div class="content">
+                        <div class="desc">
+                            <strong>Honors Fellowship, Dr. Wang</strong><br>
+                            Utilized mixture models in conjunction with supervised learning models for predictive modeling of mental health.
+                            <a href="/projects/honors-fellowship" class="project-link">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="ico">
+                        <img src="path_to_icon.png" alt="Honors Fellowship">
+                    </div>
                 </div>
-                <div class="desc">
-                    <strong>Multiple Concurrent Projects and Roles</strong><br>
-                    During this period, I was involved in several overlapping projects and roles:
-                    <ul>
-                        <li><strong>Research Assistant, UML Pearl Lab (Aug 2023 - Apr 2024):</strong> Trained and analyzed open-source multi-agent reinforcement learning algorithms focused on persistent autonomy in robotics with Pytorch and Tensorflow.</li>
-                        <li><strong>Honors Project with Dr. Ahmadzadeh (Aug 2023 - May 2024):</strong> Collaborated with PhD student, trained and tested multi-agent reinforcement learning models. Paper accepted into CDC apart of IEEE.</li>
-                        <li><strong>Mathematics Senior Seminar, Dr. Beke (Aug 2023 - Dec 2023):</strong> Developed understanding of combinatorial, categorical, computational perspectives of homology; wrote paper and presented project.</li>
-                    </ul>
-                    <a href="/projects/concurrent-2023-2024" class="project-link">Learn More About This Period</a>
-                </div>
-            </div>
-        </div>
 
-        <div class="timeline-container right">
-            <div class="content">
-                <div class="timespan">Sep 2023 - present</div>
-                <div class="ico">
-                    <img src="tt.png" alt="Ticket Tree">
-                </div>
-                <div class="desc">
-                    <strong>Cofounder and CTO, Ticket Tree</strong><br>
-                    Building an on-chain ticketing system, memorializing experiences, providing verification, decentralization, and a better relationship between organizations and their fans.
+                <div class="timeline-container">
+                    <div class="timespan">2021 - 2024</div>
+                    <div class="content">
+                        <div class="desc">
+                            <strong>University of Massachusetts: Lowell</strong><br>
+                            B.S. Mathematics, B.S. Computer Science (GPA: 3.85/4.0)<br>
+                            Activities: Math club, Robotics club, Jiu Jitsu club
+                        </div>
+                    </div>
+                    <div class="ico">
+                        <img src="uml.png" alt="UMass Lowell">
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
-</section>
+
 
     <section id="blog">
             <h2>Blog Posts</h2>
             <div class="blog-list">
                 <div class="blog-post">
-                <a href="blog-posts/ello-traveler.html" class="blog-title">My First Blog Post</a> <p class="blog-date">September 15, 2024</p>
+                <a href="blog-posts/ello-traveler.html" class="blog-title">My First Blog Post</a> September 15, 2024
+                <a href="blog-posts/ello-traveler.html" class="blog-title">My First Blog Post</a> September 15, 2024
+
             </div>            
             </div>
         </section>
