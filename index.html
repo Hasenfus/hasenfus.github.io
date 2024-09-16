@@ -3,55 +3,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Hunter Hasenfus - Portfolio</title>
+    <title>Hunter Hasenfus - Professional Timeline</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             font-size: 16px;
             line-height: 1.6;
             color: #333;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
         }
         .container {
             max-width: 970px;
             margin: 0 auto;
             padding: 15px;
         }
-        #dhead {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-        h1, h2 {
-            margin: 10px 0;
-            color: #2c3e50;
-        }
-        #dico {
-            margin-top: 10px;
-        }
-        #dico a, #dico span {
-            margin: 0 10px;
-            color: #3498db;
-            text-decoration: none;
-        }
         .section {
-            background-color: white;
-            border-radius: 6px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
             padding: 20px;
             margin-bottom: 20px;
         }
         .timeline {
             position: relative;
-            padding-left: 100px;
-            padding-right: 120px; /* Space for images */
+            padding-left: 180px; /* Increased to accommodate images */
         }
         .timeline::before {
             content: '';
@@ -60,7 +34,7 @@
             background-color: #3498db;
             top: 0;
             bottom: 0;
-            left: 100px;
+            left: 120px; /* Adjusted to place line between dates and images */
         }
         .timeline-container {
             position: relative;
@@ -75,98 +49,87 @@
             height: 10px;
             background-color: #3498db;
             border-radius: 50%;
-            left: -6px;
+            left: -66px; /* Adjusted to align with the vertical line */
             top: 5px;
         }
         .timespan {
             position: absolute;
-            left: -100px;
-            width: 80px;
+            left: -180px;
+            width: 100px;
             text-align: right;
             font-weight: bold;
             color: #2c3e50;
         }
-        .content {
-            flex-grow: 1;
-        }
         .ico {
             position: absolute;
-            right: -120px;
+            left: -60px; /* Positioned between the line and text */
             top: 0;
-            width: 100px; /* Fixed width for all images */
+            width: 50px; /* Reduced width for smaller images */
         }
         .ico img {
             width: 100%;
             height: auto;
             display: block;
         }
-        .desc {
-            padding-right: 60px;
-        }
-        .project, .paper-item {
-            display: flex;
-            margin-bottom: 20px;
-        }
-        .project img, .paper-item img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            margin-right: 20px;
-        }
-        .project-content, .paper-content {
+        .content {
             flex-grow: 1;
         }
-        .project-title, .paper-title {
-            font-weight: bold;
+        .desc {
+            margin-left: 10px; /* Small margin to separate from images */
+        }
+        .project-link {
+            display: inline-block;
+            margin-top: 10px;
             color: #3498db;
             text-decoration: none;
         }
-        .paper-year {
-            font-weight: normal;
-            color: #777;
-        }
-        .paper-authors {
-            font-style: italic;
-            margin-top: 5px;
-        }
-        ul {
-            padding-left: 20px;
+        .project-link:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-<div class="container">
-        <div id="dhead">
-            <img src="pp.jpeg" alt="Hunter Hasenfus" class="profile-pic">
-            <h1>Hunter M Hasenfus</h1>
-            <h2>Builder of blocks, thinker of thoughts</h2>
-            <div id="dico">
-                <a href="https://github.com/Hasenfus">GitHub</a>
-                <a href="https://www.linkedin.com/in/HunterHasenfus/">LinkedIn</a>
-                <a href="mailto:hasenfush@gmail.com">Email</a>
-                <span>+1(781)8314980</span>
-            </div>
-        </div>
-
     <div class="container">
         <section id="timeline" class="section">
             <h2>Professional and Academic Timeline</h2>
             <div class="timeline">
                 <div class="timeline-container">
                     <div class="timespan">Sep 2023 - present</div>
+                    <div class="ico">
+                        <img src="tt.png" alt="Ticket Tree">
+                    </div>
                     <div class="content">
                         <div class="desc">
                             <strong>Cofounder and CTO, Ticket Tree</strong><br>
                             Building an on-chain ticketing system, memorializing experiences, providing verification, decentralization, and a better relationship between organizations and their fans.
                         </div>
                     </div>
-                    <div class="ico">
+                </div>
+
+
+    <div class="container">
+        <section id="timeline" class="section">
+<!--             <h2>Professional and Academic Timeline</h2> -->
+            <div class="timeline">
+                <div class="timeline-container">
+                    <div class="timespan">Sep 2023 - present</div>
+                                        <div class="ico">
                         <img src="tt.png" alt="Ticket Tree">
                     </div>
+                    <div class="content">
+                        <div class="desc">
+                            <strong>Cofounder and CTO, Ticket Tree</strong><br>
+                            Building an on-chain ticketing system, memorializing experiences, providing verification, decentralization, and a better relationship between organizations and their fans.
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="timeline-container">
                     <div class="timespan">Aug 2023 - May 2024</div>
+                                        <div class="ico">
+                        <img src="pearl.png" alt="Multiple Projects">
+                    </div>
                     <div class="content">
                         <div class="desc">
                             <strong>Multiple Concurrent Projects and Roles</strong><br>
@@ -179,13 +142,14 @@
                             <a href="/projects/concurrent-2023-2024" class="project-link">Learn More About This Period</a>
                         </div>
                     </div>
-                    <div class="ico">
-                        <img src="pearl.png" alt="Multiple Projects">
-                    </div>
+
                 </div>
 
                 <div class="timeline-container">
                     <div class="timespan">Jun 2023 - Aug 2023</div>
+                                        <div class="ico">
+                        <img src="nin.png" alt="DoD">
+                    </div>
                     <div class="content">
                         <div class="desc">
                             <strong>Machine Learning Engineer, DoD NSIN X-Force</strong><br>
@@ -193,13 +157,14 @@
                             <a href="/projects/dod-xforce" class="project-link">Learn More</a>
                         </div>
                     </div>
-                    <div class="ico">
-                        <img src="nin.png" alt="DoD">
-                    </div>
+
                 </div>
 
                 <div class="timeline-container">
                     <div class="timespan">Sept 2022 - May 2023</div>
+                                        <div class="ico">
+                        <img src="se.png" alt="Schneider Electric">
+                    </div>
                     <div class="content">
                         <div class="desc">
                             <strong>Software Project for Schneider Electric</strong><br>
@@ -207,13 +172,14 @@
                             <a href="/projects/schneider-electric" class="project-link">Learn More</a>
                         </div>
                     </div>
-                    <div class="ico">
-                        <img src="se.png" alt="Schneider Electric">
-                    </div>
+
                 </div>
 
                 <div class="timeline-container">
                     <div class="timespan">Aug 2022 - Apr 2023</div>
+                                        <div class="ico">
+                        <img src="path_to_icon.png" alt="Honors Fellowship">
+                    </div>
                     <div class="content">
                         <div class="desc">
                             <strong>Honors Fellowship, Dr. Wang</strong><br>
@@ -221,13 +187,14 @@
                             <a href="/projects/honors-fellowship" class="project-link">Learn More</a>
                         </div>
                     </div>
-                    <div class="ico">
-                        <img src="path_to_icon.png" alt="Honors Fellowship">
-                    </div>
+
                 </div>
 
                 <div class="timeline-container">
                     <div class="timespan">2021 - 2024</div>
+                                        <div class="ico">
+                        <img src="uml.png" alt="UMass Lowell">
+                    </div>
                     <div class="content">
                         <div class="desc">
                             <strong>University of Massachusetts: Lowell</strong><br>
@@ -235,9 +202,7 @@
                             Activities: Math club, Robotics club, Jiu Jitsu club
                         </div>
                     </div>
-                    <div class="ico">
-                        <img src="uml.png" alt="UMass Lowell">
-                    </div>
+
                 </div>
             </div>
         </section>
