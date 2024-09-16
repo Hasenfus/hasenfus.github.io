@@ -25,7 +25,7 @@
         }
         .timeline {
             position: relative;
-            padding-left: 180px; /* Increased to accommodate images */
+            padding-left: 220px; /* Increased to accommodate images and dates */
         }
         .timeline::before {
             content: '';
@@ -34,7 +34,7 @@
             background-color: #3498db;
             top: 0;
             bottom: 0;
-            left: 120px; /* Adjusted to place line between dates and images */
+            left: 160px; /* Adjusted to place line between dates and images */
         }
         .timeline-container {
             position: relative;
@@ -54,15 +54,15 @@
         }
         .timespan {
             position: absolute;
-            left: -180px;
-            width: 100px;
+            left: -220px;
+            width: 140px;
             text-align: right;
             font-weight: bold;
             color: #2c3e50;
         }
         .ico {
             position: absolute;
-            left: -60px; /* Positioned between the line and text */
+            left: -70px; /* Positioned between the line and text */
             top: 0;
             width: 50px; /* Reduced width for smaller images */
         }
@@ -70,6 +70,7 @@
             width: 100%;
             height: auto;
             display: block;
+            border-radius: 10px; /* Added rounded corners to images */
         }
         .content {
             flex-grow: 1;
@@ -86,22 +87,62 @@
         .project-link:hover {
             text-decoration: underline;
         }
+        #dhead {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* Makes the headshot circular */
+            margin-right: 20px;
+        }
+        #dhead h1, #dhead h2 {
+            margin: 0;
+        }
+        #dico {
+            margin-top: 10px;
+        }
+        #dico a, #dico span {
+            margin-right: 10px;
+        }
+        #blog {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .blog-list {
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-post {
+            margin-bottom: 10px;
+        }
+        .blog-title {
+            color: #3498db;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .blog-title:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div id="dhead">
             <img src="pp.jpeg" alt="Hunter Hasenfus" class="profile-pic">
-            <h1>Hunter M Hasenfus</h1>
-            <h2>Builder of blocks, thinker of thoughts</h2>
-            <div id="dico">
-                <a href="https://github.com/Hasenfus">GitHub</a>
-                <a href="https://www.linkedin.com/in/HunterHasenfus/">LinkedIn</a>
-                <a href="mailto:hasenfush@gmail.com">Email</a>
-                <span>+1(781)8314980</span>
+            <div>
+                <h1>Hunter M Hasenfus</h1>
+                <h2>Builder of blocks, thinker of thoughts</h2>
+                <div id="dico">
+                    <a href="https://github.com/Hasenfus">GitHub</a>
+                    <a href="https://www.linkedin.com/in/HunterHasenfus/">LinkedIn</a>
+                    <a href="mailto:hasenfush@gmail.com">Email</a>
+                    <span>+1(781)8314980</span>
+                </div>
             </div>
         </div>
-
 
     <div class="container">
         <section id="timeline" class="section">
@@ -205,8 +246,8 @@
     </div>
 
 
-    <section id="blog">
-            <h2>Blog Posts</h2>
+<section id="blog" class="section">
+    <h2>Blog Posts</h2>
             <div class="blog-list">
                 <div class="blog-post">
                 <a href="blog-posts/ello-traveler.html" class="blog-title">My First Blog Post</a> September 15, 2024
