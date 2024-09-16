@@ -3,14 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Hunter Hasenfus - Comprehensive Portfolio</title>
+    <title>Hunter Hasenfus - Portfolio</title>
     <style>
-        :root {
-            --rem: 16;
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --background-color: #f4f4f4;
-        }
         body {
             font-family: Arial, sans-serif;
             font-size: 16px;
@@ -18,103 +12,121 @@
             color: #333;
             margin: 0;
             padding: 0;
-            background-color: var(--background-color);
+            background-color: #f4f4f4;
         }
         .container {
-            max-width: 1200px;
+            max-width: 970px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 15px;
         }
         h1, h2 {
-            color: var(--secondary-color);
+            color: #2c3e50;
         }
-        section {
-            margin-bottom: 50px;
+        #dhead {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
         }
-
-        /* ... (previous CSS for timeline and blog remains the same) ... */
-
-        /* Projects Styles */
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
         }
-        .project-card {
-            background-color: white;
-            border-radius: 6px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            padding: 20px;
+        #dhead-content {
+            flex-grow: 1;
         }
-        .project-title {
-            color: var(--primary-color);
-            margin-top: 0;
-        }
-        .project-description {
-            margin-top: 10px;
-        }
-        .project-link {
-            display: inline-block;
-            margin-top: 10px;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .project-link:hover {
-            text-decoration: underline;
-        }
-
-        /* Papers Styles */
-        .paper-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .paper-item {
+        .section {
             background-color: white;
             border-radius: 6px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             padding: 20px;
             margin-bottom: 20px;
         }
-        .paper-title {
-            color: var(--primary-color);
-            margin-top: 0;
+        .timeline {
+            position: relative;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: #3498db;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+        }
+        .timeline-container {
+            padding-left: 40px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #3498db;
+            border-radius: 50%;
+            left: 16px;
+            top: 5px;
+        }
+        .ico img {
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            left: 5px;
+            top: 0;
+        }
+        .timespan {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .project, .paper-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .project img, .paper-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .project-content, .paper-content {
+            flex-grow: 1;
+        }
+        .project-title, .paper-title {
+            font-weight: bold;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .paper-year {
+            font-weight: normal;
+            color: #777;
         }
         .paper-authors {
             font-style: italic;
-            margin-bottom: 10px;
+            margin-top: 5px;
         }
-        .paper-publication {
-            font-weight: bold;
-        }
-        .paper-link {
-            display: inline-block;
-            margin-top: 10px;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .paper-link:hover {
-            text-decoration: underline;
+        ul {
+            padding-left: 20px;
         }
     </style>
 </head>
 <body>
-    <div id="dhead" class="container">
-        <img src="pp_hmh.jpeg" alt="Hunter Hasenfus" class="profile-pic">
-        <div id="dhead-content">
-            <h1>Hunter M Hasenfus</h1>
-            <h2>Builder of blocks, thinker of thoughtst</h2>
-            <div id="dico">
-                <a href="https://github.com/Hasenfus">GitHub</a> |
-                <a href="https://www.linkedin.com/in/HunterHasenfus/">LinkedIn</a> |
-                <a href="mailto:hasenfush@gmail.com">Email</a> |
-                <span>+1(781)8314980</span>
+    <div class="container">
+        <div id="dhead">
+            <img src="pp_hmh.png" alt="Hunter Hasenfus" class="profile-pic">
+            <div id="dhead-content">
+                <h1>Hunter M Hasenfus</h1>
+                <h2>Builder of blocks, thinker of thoughts</h2>
+                <div id="dico">
+                    <a href="https://github.com/Hasenfus">GitHub</a> |
+                    <a href="https://www.linkedin.com/in/HunterHasenfus/">LinkedIn</a> |
+                    <a href="mailto:hasenfush@gmail.com">Email</a> |
+                    <span>+1(781)8314980</span>
+                </div>
             </div>
         </div>
-    </div>
-
-    <hr>
 
 <section id="timeline">
     <h2>Professional and Academic Timeline</h2>
@@ -123,7 +135,7 @@
             <div class="content">
                 <div class="timespan">2021 - 2024</div>
                 <div class="ico">
-                    <img src="path_to_uml_logo.png" alt="UMass Lowell">
+                    <img src="uml.png" alt="UMass Lowell">
                 </div>
                 <div class="desc">
                     <strong>University of Massachusetts: Lowell</strong><br>
@@ -136,9 +148,6 @@
         <div class="timeline-container right">
             <div class="content">
                 <div class="timespan">Aug 2022 - Apr 2023</div>
-                <div class="ico">
-                    <img src="path_to_project_icon.png" alt="Honors Fellowship">
-                </div>
                 <div class="desc">
                     <strong>Honors Fellowship, Dr. Wang</strong><br>
                     Utilized mixture models in conjunction with supervised learning models for predictive modeling of mental health.
@@ -151,7 +160,7 @@
             <div class="content">
                 <div class="timespan">Sept 2022 - May 2023</div>
                 <div class="ico">
-                    <img src="path_to_schneider_logo.png" alt="Schneider Electric">
+                    <img src="se.png" alt="Schneider Electric">
                 </div>
                 <div class="desc">
                     <strong>Software Project for Schneider Electric</strong><br>
@@ -179,7 +188,7 @@
             <div class="content">
                 <div class="timespan">Aug 2023 - May 2024</div>
                 <div class="ico">
-                    <img src="path_to_combined_icon.png" alt="Multiple Projects">
+                    <img src="pearl.png" alt="Multiple Projects">
                 </div>
                 <div class="desc">
                     <strong>Multiple Concurrent Projects and Roles</strong><br>
@@ -198,7 +207,7 @@
             <div class="content">
                 <div class="timespan">Sep 2023 - present</div>
                 <div class="ico">
-                    <img src="path_to_tick3ttree_logo.png" alt="Ticket Tree">
+                    <img src="tt.png" alt="Ticket Tree">
                 </div>
                 <div class="desc">
                     <strong>Cofounder and CTO, Ticket Tree</strong><br>
@@ -223,39 +232,37 @@
         </section>
 
 
-        <section id="projects">
-            <h2> Pet Projects </h2>
-                <div class="project-card">
-                    <h3 class="project-title">Town of Turing</h3>
-                    <p class="project-description"> Turning town of salem into a means of testing deception capabilities of large language models.</p>
-                    <a href="https://github.com/Hasenfus/Town-of-Turing" class="project-link">Learn More</a>
+        <div class="section">
+            <h2>Pet Projects</h2>
+            <div class="project">
+                <img src="path_to_project_image.jpg" alt="Town of Turing">
+                <div class="project-content">
+                    <a href="https://github.com/Hasenfus/Town-of-Turing" class="project-title">Town of Turing</a>
+                    <p>Turning town of salem into a means of testing deception capabilities of large language models.</p>
                 </div>
-                <div class="project-card">
-                    <h3 class="project-title">UMAP: Functional and categoric implementation</h3>
-                    <p class="project-description"></p>
-                    <a href="https://github.com/Hasenfus/UMAP-haskell" class="project-link">Learn More</a>
-                </div>
-               
-                <!-- Add more project cards as needed -->
             </div>
-        </section>
+            <div class="project">
+                <img src="path_to_project_image.jpg" alt="UMAP">
+                <div class="project-content">
+                    <a href="https://github.com/Hasenfus/UMAP-haskell" class="project-title">UMAP: Functional and categoric implementation</a>
+                    <p>Description of the UMAP project.</p>
+                </div>
+            </div>
+        </div>
 
-        <section id="papers">
+        <div class="section">
             <h2>Academic Papers</h2>
-            <ul class="paper-list">
-                <li class="paper-item">
-                    <h3 class="paper-title">Title of Your Paper</h3>
+            <div class="paper-item">
+                <img src="path_to_paper_image.jpg" alt="Paper Title">
+                <div class="paper-content">
+                    <a href="/path-to-paper.pdf" class="paper-title">Title of Your Paper <span class="paper-year">(Year)</span></a>
                     <p class="paper-authors">Hunter Hasenfus, Co-author Name</p>
-                    <p class="paper-publication">Conference/Journal Name, Year</p>
                     <p>Brief description or abstract of the paper.</p>
-                    <a href="/path-to-paper.pdf" class="paper-link">Read Paper</a>
-                </li>
-                <!-- Add more paper items as needed -->
-            </ul>
-        </section>
-    </div>
+                </div>
+            </div>
+        </div>
 
-    <div id="skills" class="container">
+<!--     <div id="skills" class="container">
         <div class="ctitle">Skills</div>
         <ul>
             <li><strong>Computational Thinking:</strong> Machine Learning, Reinforcement Learning, Math Modelling/Simulation</li>
@@ -263,7 +270,7 @@
             <li><strong>Mathematics:</strong> Calculus, Differential Equations, Linear Algebra, Probability, Statistics, Real Analysis, Topology, Measure Theory, and interests in Category Theory</li>
             <li><strong>Soft Skills:</strong> Public Speaking, Scientific Journalism, Blogging</li>
         </ul>
-    </div>
+    </div> -->
 
 
 
