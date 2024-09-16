@@ -24,46 +24,68 @@
         .entry {
             display: flex;
             margin-bottom: 20px;
+            align-items: center;
         }
         .timespan {
             width: 150px;
             flex-shrink: 0;
         }
         .ico {
-            width: 50px;
-            text-align: center;
-            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            margin-right: 20px;
         }
         .ico img {
-            max-width: 32px;
+            max-width: 60px;
+            max-height: 60px;
         }
         .desc {
             flex-grow: 1;
         }
-        .project, .pub {
+        .project {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
             margin-bottom: 20px;
         }
-        .pico {
-            float: left;
-            margin-right: 15px;
+        .project-title {
+            font-weight: bold;
+            margin-bottom: 10px;
         }
-        .pico img {
-            max-width: 100px;
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 30px;
         }
-        .pend {
-            clear: both;
+        #dhead {
+            display: flex;
+            align-items: center;
+        }
+        #dhead-content {
+            flex-grow: 1;
         }
     </style>
 </head>
 <body>
     <div id="dhead" class="container">
-        <h1>Hunter M Hasenfus</h1>
-        <h2>Mathematics and Computer Science Enthusiast</h2>
-        <div id="dico">
-            <a href="https://github.com/Hasenfus">GitHub</a> |
-            <a href="https://www.linkedin.com/in/HunterHasenfus/">LinkedIn</a> |
-            <a href="mailto:hasenfush@gmail.com">Email</a> |
-            <span>+1(781)8314980</span>
+        <img src="path_to_your_profile_picture.jpg" alt="Hunter Hasenfus" class="profile-pic">
+        <div id="dhead-content">
+            <h1>Hunter M Hasenfus</h1>
+            <h2>Mathematics and Computer Science Enthusiast</h2>
+            <div id="dico">
+                <a href="https://github.com/Hasenfus">GitHub</a> |
+                <a href="https://www.linkedin.com/in/HunterHasenfus/">LinkedIn</a> |
+                <a href="mailto:hasenfush@gmail.com">Email</a> |
+                <span>+1(781)8314980</span>
+            </div>
         </div>
     </div>
 
@@ -95,6 +117,9 @@
         <div class="ctitle">Work Experience</div>
         <div class="entry">
             <div class="timespan">Sep 2023 - present</div>
+            <div class="ico">
+                <img src="tt.png" alt="Tick3tTree">
+            </div>
             <div class="desc">
                 <strong>Project Lead, Tick3tTree</strong><br>
                 Developed Anchor smart contracts for the Solana blockchain, and integrated Typescript APIs and rust backend into our micro-services architecture with AWS.
@@ -102,6 +127,9 @@
         </div>
         <div class="entry">
             <div class="timespan">Aug 2023 - Apr 2024</div>
+            <div class="ico">
+                <img src="pearl.png" alt="UML PEARL">
+            </div>
             <div class="desc">
                 <strong>Research Assistant, UML Pearl Lab</strong><br>
                 Trained and analyzed open-source multi-agent reinforcement learning algorithms focused on persistent autonomy in robotics with Pytorch and Tensorflow.
@@ -109,28 +137,19 @@
         </div>
         <div class="entry">
             <div class="timespan">Jun 2023 - Aug 2023</div>
+            <div class="ico">
+                <img src="nin.png" alt="DoD">
+            </div>
             <div class="desc">
                 <strong>Machine Learning Engineer, DoD NSIN X-Force</strong><br>
                 Assigned to Georgia Tech Research Institute: CIPHER Division as part of Department of Defense - National Security Innovation Network's X-Force Program. [Deep learning, Graph neural networks]
-            </div>
-        </div>
-        <div class="entry">
-            <div class="timespan">Dec 2022 - Feb 2023</div>
-            <div class="desc">
-                <strong>Machine Learning intern, WAIITT</strong><br>
-                Devised data pipelines, and implemented research techniques with Pytorch and AWS.
-            </div>
-        </div>
-        <div class="entry">
-            <div class="timespan">Nov 2022 - Apr 2023</div>
-            <div class="desc">
-                <strong>Mathematics tutor, UML</strong>
             </div>
         </div>
     </div>
 
     <div id="projects" class="container">
         <div class="ctitle">Projects</div>
+        <div class=""> Academic </div>
         <div class="project">
             <div class="pdesc">
                 <strong>Honors Project, Dr. Ahmadzadeh (Aug 2023 - Apr 2024)</strong><br>
@@ -155,6 +174,35 @@
                 Utilized mixture models in junction with supervised learning models for predictive modeling of mental health.
             </div>
         </div>
+
+        <div class "ctitle"> Pet Projects </div>
+        <div class="project">
+            <div class="pdesc">
+                <strong> UMAP: Functional and categoric implementation </strong><br>
+                
+            </div>
+        </div>
+         <div class="project">
+            <div class="pdesc">
+                <strong href="https://github.com/Hasenfus/Town-of-Turing"> Town of Turing </strong><br>
+                Turning town of salem into a means of testing deception capabilities of large language models.
+            </div>
+        </div>
+         <div class="project">
+            <div class="pdesc">
+                <strong></strong><br>
+            </div>
+        </div>
+         <div class="project">
+            <div class="pdesc">
+                <strong></strong><br>
+            </div>
+        </div>
+         <div class="project">
+            <div class="pdesc">
+                <strong></strong><br>
+            </div>
+        </div>
     </div>
 
     <div id="leadership" class="container">
@@ -166,10 +214,6 @@
         </ul>
     </div>
 
-    <div id="misc" class="container">
-        <div class="ctitle">Additional Information</div>
-        <p>Last updated: August 19, 2024</p>
-    </div>
 
     <script>
         // You can add any JavaScript here if needed
