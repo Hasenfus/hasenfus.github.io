@@ -13,134 +13,47 @@
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-        }
-        .container {
-            max-width: 970px;
-            margin: 0 auto;
-            padding: 15px;
-        }
-        .section {
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        .timeline {
-            position: relative;
-            padding-left: 220px; /* Increased to accommodate images and dates */
-        }
-        .timeline::before {
-            content: '';
-            position: absolute;
-            width: 2px;
-            background-color: #3498db;
-            top: 0;
-            bottom: 0;
-            left: 160px; /* Adjusted to place line between dates and images */
-        }
-        .timeline-container {
-            position: relative;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: flex-start;
-        }
-        .timeline-container::before {
-            content: '';
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: #3498db;
-            border-radius: 50%;
-            left: -66px; /* Adjusted to align with the vertical line */
-            top: 5px;
-        }
-        .timespan {
-            position: absolute;
-            left: -220px;
-            width: 140px;
-            text-align: right;
-            font-weight: bold;
-            color: #2c3e50;
-        }
-        .ico {
-            position: absolute;
-            left: -70px; /* Positioned between the line and text */
-            top: 0;
-            width: 50px; /* Reduced width for smaller images */
-        }
-        .ico img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 10px; /* Added rounded corners to images */
-        }
-        .content {
-            flex-grow: 1;
-        }
-        .desc {
-            margin-left: 10px; /* Small margin to separate from images */
-        }
-        .project-link {
-            display: inline-block;
-            margin-top: 10px;
-            color: #3498db;
-            text-decoration: none;
-        }
-        .project-link:hover {
-            text-decoration: underline;
-        }
-        #dhead {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .profile-pic {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%; /* Makes the headshot circular */
-            margin-right: 20px;
-        }
-        #dhead h1, #dhead h2 {
-            margin: 0;
-        }
-        #dico {
-            margin-top: 10px;
-        }
-        #dico a, #dico span {
-            margin-right: 10px;
-        }
-        #blog {
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        .blog-list {
-            display: flex;
-            flex-direction: column;
-        }
-        .blog-post {
-            margin-bottom: 10px;
-        }
-        .blog-title {
-            color: #3498db;
-            text-decoration: none;
-            margin-right: 10px;
-        }
-        .blog-title:hover {
-            text-decoration: underline;
-        }
+        }        
     </style>
+    <link rel="stylesheet" href="/styles.css"> <!-- Link to your main CSS file -->
+
 </head>
 <body>
     <div class="container">
-        <div id="dhead">
+        <div id="dhead" style="display: flex; align-items: center; margin-left: 20px;">
             <img src="pp.jpeg" alt="Hunter Hasenfus" class="profile-pic">
             <div>
-                <h1>Hunter M Hasenfus</h1>
-                <h2>Builder of blocks, thinker of thoughts</h2>
+                <h1 style="color: black; font-family: Arial, sans-serif;"> Hunter M Hasenfus</h1>
                 <div id="dico">
-                    <a href="https://github.com/Hasenfus">GitHub</a>
-                    <a href="https://www.linkedin.com/in/HunterHasenfus/">LinkedIn</a>
-                    <a href="mailto:hasenfush@gmail.com">Email</a>
-                    <span>+1(781)8314980</span>
+                    <a href="https://github.com/Hasenfus">
+                        <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/github.png" alt="github"/>
+                    </a>
+                    <a href="https://www.linkedin.com/in/HunterHasenfus/">
+                        <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/linkedin.png" alt="LinkedIn"/>
+                    </a>
+                    <a href="mailto:hasenfush@gmail.com">
+                        <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/new-post.png" alt="Email"/>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=Vb3g3-YAAAAJ&hl=en">
+                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/google-scholar--v2.png" alt="google-scholar--v2"/>
+                    </a>
+                    <a href="https://x.com/Hasenfus">
+                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/twitter.png" alt="twitter"/>
+                    </a>
+                    <a href="HMH_Resume.pdf">
+                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/resume.png" alt="resume"/>
+                    </a>
                 </div>
+            </div>
+            <div style="margin-left: 20px; color: grey; font-family: 'Times New Roman', Times, serif; font-size: smaller;">
+                <h2><i>"The Thought goes ever on and on<br>
+                    Down from the synapse where it began<br>
+                    Now far ahead the Thought has gone<br>
+                    And I must follow, if I can,</i></h2>
+                <h2 style="margin-left: 20px;"><i>Pursue it with waining will, <br>
+                    Until it joins some larger plan. <br>
+                    Where many ideas and projects meet. <br>
+                    And whither then? I cannot say."</i></h2>
             </div>
         </div>
 
@@ -156,31 +69,39 @@
                     <div class="content">
                         <div class="desc">
                             <strong>Cofounder and CTO, Ticket Tree</strong><br>
-                            Building an on-chain ticketing system, memorializing experiences, providing verification, decentralization, and a better relationship between organizations and their fans.
+                            Building an on-chain <a href="https://tick3ttree.com/" target="_blank">ticketing system</a>, memorializing experiences, providing verification, decentralization, and a better relationship between organizations and their fans.
                         </div>
                     </div>
 
                 </div>
 
                 <div class="timeline-container">
-                    <div class="timespan">Aug 2023 - May 2024</div>
+                    <div class="timespan">2021 - 2024</div>
                                         <div class="ico">
-                        <img src="pearl.png" alt="Multiple Projects">
+                        <img src="uml.png" alt="UMass Lowell">
                     </div>
                     <div class="content">
                         <div class="desc">
-                            <strong>Multiple Concurrent Projects and Roles</strong><br>
-                            During this period, I was involved in several overlapping projects and roles:
-                            <ul>
-                                <li><strong>Research Assistant, UML Pearl Lab (Aug 2023 - Apr 2024):</strong> Trained and analyzed open-source multi-agent reinforcement learning algorithms focused on persistent autonomy in robotics with Pytorch and Tensorflow.</li>
-                                <li><strong>Honors Project with Dr. Ahmadzadeh (Aug 2023 - May 2024):</strong> Collaborated with PhD student, trained and tested multi-agent reinforcement learning models. Paper accepted into CDC apart of IEEE.</li>
-                                <li><strong>Mathematics Senior Seminar, Dr. Beke (Aug 2023 - Dec 2023):</strong> Developed understanding of combinatorial, categorical, computational perspectives of homology; wrote paper and presented project.</li>
-                            </ul>
-                            <a href="/projects/concurrent-2023-2024" class="project-link">Learn More About This Period</a>
+                            <strong>University of Massachusetts: Lowell</strong><br> During my time at UMass Lowell I pursued a dual degree in Mathematics and Computer Science. The intersection of these fields is what sparked my interest in machine learning and mathematics. I began with curiosity within interpritability research using Topological Data Analysis and persued this into a <a href="#tda">research</a> assistant position with Dr. Tibor Beke. I then began working with Dr. Ahmadzadeh on <a href="#honors">multi-agent reinforcement learning</a> and persistent autonomy in robotics. Very curious about agents and their interaction with the world.
+
+                            
                         </div>
                     </div>
 
                 </div>
+
+                <div class="timeline-container">
+                    <div class="content">
+                        <div class="timespan">Aug 2023 - May 2024</div>
+                        <div class="ico">
+                            <img src="pearl.png" alt="UML">
+                        </div>
+                        <div class="desc">
+                            <strong>Research Assistant, UML Pearl Lab :</strong> Trained and analyzed open-source multi-agent reinforcement learning algorithms focused on persistent autonomy in robotics with Pytorch and Tensorflow.
+                        </div>
+                    </div>
+                </div>
+
 
                 <div class="timeline-container">
                     <div class="timespan">Jun 2023 - Aug 2023</div>
@@ -215,7 +136,7 @@
                 <div class="timeline-container">
                     <div class="timespan">Aug 2022 - Apr 2023</div>
                                         <div class="ico">
-                        <img src="path_to_icon.png" alt="Honors Fellowship">
+                        <img src="uml.png" alt="Honors Fellowship">
                     </div>
                     <div class="content">
                         <div class="desc">
@@ -224,69 +145,83 @@
                             <a href="/projects/honors-fellowship" class="project-link">Learn More</a>
                         </div>
                     </div>
-
                 </div>
 
-                <div class="timeline-container">
-                    <div class="timespan">2021 - 2024</div>
-                                        <div class="ico">
-                        <img src="uml.jpg" alt="UMass Lowell">
-                    </div>
-                    <div class="content">
-                        <div class="desc">
-                            <strong>University of Massachusetts: Lowell</strong><br>
-                            B.S. Mathematics, B.S. Computer Science (GPA: 3.85/4.0)<br>
-                            Activities: Math club, Robotics club, Jiu Jitsu club
-                        </div>
-                    </div>
-
-                </div>
+                
             </div>
         </section>
     </div>
 
 
-<section id="blog" class="section">
-    <h2>Blog Posts</h2>
+    <section id="blog" class="section">
+        <h2>Blog Posts</h2>
             <div class="blog-list">
                 <div class="blog-post">
-                <a href="blog-posts/ello-traveler.html" class="blog-title">My First Blog Post</a> September 15, 2024
-                <a href="blog-posts/ello-traveler.html" class="blog-title">My First Blog Post</a> September 15, 2024
-
+                <span class="blog-date">September 15, 2024</span> <a href="blog-posts/1.ello-traveler/ello-traveler.html" class="blog-title">Ello traveler</a>
+                <br>
+                <span class="blog-date">September 15, 2024</span> <a href="blog-posts/2.RLenv/RLenv.html" class="blog-title">Constructs of an RL env.</a>
+                <br>
+                <span class="blog-date">September 15, 2024</span> <a href="blog-posts/3.AddictionMetrics/AddictionMetrics.html" class="blog-title">Addiction Metrics</a>
+                <br>
+                <span class="blog-date">September 15, 2024</span> <a href="blog-posts/4.VSCodeEditorExtension/index.html" class="blog-title">VSCode Editor Extension</a>
             </div>            
             </div>
         </section>
 
-
-        <div class="section">
+        <div id="projects" class="section">
             <h2>Pet Projects</h2>
-            <div class="project">
-                <img src="path_to_project_image.jpg" alt="Town of Turing">
-                <div class="project-content">
+            <div class="project" style="display: flex; align-items: center;">
+                <img class="project-img" src="project-pic/tos.png" alt="Town of Turing" style="margin-right: 20px;">
+                <div id="tos" class="project-content">
                     <a href="https://github.com/Hasenfus/Town-of-Turing" class="project-title">Town of Turing</a>
-                    <p>Turning town of salem into a means of testing deception capabilities of large language models.</p>
+                    is a game turning town of salem into a means of testing deception capabilities of large language models.
                 </div>
             </div>
-            <div class="project">
-                <img src="path_to_project_image.jpg" alt="UMAP">
-                <div class="project-content">
+            <div class="project" style="display: flex; align-items: center;">
+                <img class="project-img" src="project-pic/umap.png" alt="UMAP" style="margin-right: 20px;">
+                <div id="umap" class="project-content">
                     <a href="https://github.com/Hasenfus/UMAP-haskell" class="project-title">UMAP: Functional and categoric implementation</a>
-                    <p>Description of the UMAP project.</p>
+                    is a functional and categoric implementation of the Uniform Manifold Approximation and Projection algorithm.
+                </div>
+            </div>
+            <div class="project" style="display: flex; align-items: center;">
+                <img class="project-img" src="https://gymnasium.farama.org/_images/ant.gif" alt="Honors Project" style="margin-right: 20px;">
+                <div id="honors" class="project-content">
+                    <a  class="project-title">Honors Project with Dr. Ahmadzadeh (Aug 2023 - May 2024)</a>
+                    Collaborated with PhD student, trained and tested multi-agent reinforcement learning models. <a href="#cdc" class="paper-title">accepted into CDC apart of IEEE.</a> This work built upon several several previous works on discrete and continuous MARL domains. Comparing algorithms including: <a href="https://github.com/Hasenfus/TRPO-in-MARL" class="paper-title">HATRPO/HAPPO</a>, <a href="https://github.com/Hasenfus/Q-functionals" class="paper-title">Q-functionals</a>, and <a href="https://github.com/Hasenfus/maddpg" class="paper-title">MADDPG</a>.
+                </div>
+            </div>
+            <div class="project" style="display: flex; align-items: center;">
+                <img class="project-img" src="project-pic/tda.png" alt="Mathematics Senior Seminar" style="margin-right: 20px;">
+                <div id="tda" class="project-content">
+                    <a href="https://github.com/Hasenfus/Homology" class="project-title">Mathematics Senior Seminar, Dr. Beke</a>
+                    Developed understanding of combinatorial, categorical, computational perspectives of homology; wrote paper and presented project.
                 </div>
             </div>
         </div>
-
-        <div class="section">
+        <div id="papers" class="section">
             <h2>Academic Papers</h2>
             <div class="paper-item">
-                <img src="path_to_paper_image.jpg" alt="Paper Title">
-                <div class="paper-content">
-                    <a href="/path-to-paper.pdf" class="paper-title">Title of Your Paper <span class="paper-year">(Year)</span></a>
-                    <p class="paper-authors">Hunter Hasenfus, Co-author Name</p>
-                    <p>Brief description or abstract of the paper.</p>
+                <div id="cdc" class="paper-content">
+                    <a class="paper-title">Collaborative Adaptation for Recovery from Unforeseen Malfunctions in Discrete and Continuous MARL Domains</a>
+                    <p class="paper-authors">Authors: Yasin Findik, Hunter Hasenfus, Reza Ahmadzadeh</p>
+                </div>
+            </div>
+            <div class="paper-item">
+                <div id="ss" class="paper-content">
+                    <a href="/papers/FDRAFT_Hasenfus_SS_F2023.pdf" class="paper-title">Mathematics Senior Seminar</a>
+                    <p class="paper-authors">Author: Hunter Hasenfus</p>
+                </div>
+            </div>
+            <div class="paper-item">
+                <div id="honors-project" class="paper-content">
+                    <a href="/papers/Hasenfus_Honors_Project_Final_Report.pdf" class="paper-title">Honors Project</a>
+                    <p class="paper-authors">Author: Hunter Hasenfus</p>
                 </div>
             </div>
         </div>
+
+
 
 <!--     <div id="skills" class="container">
         <div class="ctitle">Skills</div>

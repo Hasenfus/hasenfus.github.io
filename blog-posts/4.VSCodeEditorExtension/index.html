@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VSCode Editor Extension</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <article>
+        <h1>Your Blog Post Title</h1>
+        <p>Your blog post content goes here...</p>
+        
+        <h2>Embedded Tweet:</h2>
+        <div id="tweetContainer"></div>
+    </article>
+
+    <script>
+        function embedTweet(tweetUrl) {
+            const oembedEndpoint = 'https://publish.twitter.com/oembed?url=' + encodeURIComponent(tweetUrl);
+            
+            fetch(oembedEndpoint)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('tweetContainer').innerHTML = data.html;
+                    
+                    // Load Twitter's widgets.js script
+                    const script = document.createElement('script');
+                    script.src = "https://platform.twitter.com/widgets.js";
+                    script.charset = "utf-8";
+                    document.body.appendChild(script);
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        // Usage: Call this function with the tweet's URL
+        embedTweet('https://x.com/michael_nielsen/status/1834696095466737783');
+    </script>
+</body>
+</html>
