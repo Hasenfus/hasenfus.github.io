@@ -1,0 +1,99 @@
+body {
+    font-family: Georgia, serif;
+    line-height: 1.5;
+    color: #1a1a1a;
+    background-color: #fdfdfd;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content {
+    flex: 3;
+    padding-right: 20px;
+    padding-bottom: 100px; /* Add ample space at the bottom */
+    margin-bottom: 500px; /* Additional margin for extra spacing */
+}
+
+.citations {
+    flex: 1;
+    padding: 0 20px;
+    border-left: 1px solid #ccc;
+}
+
+.table-of-contents {
+    flex: 1;
+    position: sticky;
+    top: 20px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    padding-left: 20px;
+}
+
+/* Style for the active section in TOC */
+.table-of-contents .active {
+    font-weight: bold;
+    color: #000;
+}
+
+
+
+.citation {
+    cursor: pointer;
+    color: #0000EE;
+    vertical-align: super;
+    font-size: smaller;
+}
+
+.citation-text {
+    position: absolute;
+    transition: opacity 0.3s ease;
+    background-color: #f9f9f9;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+.table-of-contents a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.table-of-contents .active {
+    color: #0000EE;
+    font-weight: bold;
+}
+
+.left-quote {
+    border-left: 4px solid #ccc;
+    margin-left: 0;
+    padding-left: 25px; /* Increased padding */
+}
+
+.tag {
+    display: inline-block;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px; /* Increased margin */
+    color: #3498db;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}

@@ -15,7 +15,7 @@
     content: '';
     position: absolute;
     width: 2px;
-    background-color: #3498db;
+    background-color: #ca7608;
     top: 0;
     bottom: 0;
     left: 160px; /* Adjusted to place line between dates and images */
@@ -31,7 +31,7 @@
     position: absolute;
     width: 10px;
     height: 10px;
-    background-color: #3498db;
+    background-color: #ca7608;
     border-radius: 50%;
     left: -66px; /* Adjusted to align with the vertical line */
     top: 5px;
@@ -65,7 +65,7 @@
 .project-link {
     display: inline-block;
     margin-top: 10px;
-    color: #3498db;
+    color: #ca7608;
     text-decoration: none;
 }
 .project-link:hover {
@@ -149,4 +149,49 @@
 
 .page-content {
     margin-bottom: 100px;
+}
+
+.series-container {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.expand-button {
+    background: none;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    padding: 0 5px;
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+.expand-button.expanded {
+    transform: rotate(180deg);
+}
+
+.series-posts-list {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.series-posts-list.expanded {
+    display: block;
+}
+
+.series-posts-list li {
+    margin: 5px 0;
+}
+
+.series-posts-list a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.series-posts-list a:hover {
+    color: #00FFFF;
 }

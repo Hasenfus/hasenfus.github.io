@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Hunter Hasenfus - Professional Timeline</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- DPSDbeyond font -->
+    <link href="" rel="stylesheet"> <!-- This link is empty and should be removed or filled -->
+    <link rel="stylesheet" href="css/main.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,8 +19,6 @@
             padding: 0;
         }        
     </style>
-    <link rel="stylesheet" href="/styles.css"> <!-- Link to your main CSS file -->
-
 </head>
 <body>
     <div class="container">
@@ -37,7 +39,7 @@
                     <a href="https://scholar.google.com/citations?user=Vb3g3-YAAAAJ&hl=en">
                         <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/google-scholar--v2.png" alt="google-scholar--v2"/>
                     </a>
-                    <a href="https://x.com/Hasenfus">
+                    <a href="https://x.com/h_ntcr">
                         <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/twitter.png" alt="twitter"/>
                     </a>
                     <a href="HMH_Resume.pdf">
@@ -45,12 +47,12 @@
                     </a>
                 </div>
             </div>
-            <div style="margin-left: 20px; color: grey; font-family: 'Times New Roman', Times, serif; font-size: smaller;">
+            <div style="margin-left: 20px; margin-right: 20px; color: grey; font-family: 'Times New Roman', Times, serif; font-size: 14px;">
                 <h2><i>"The Thought goes ever on and on<br>
                     Down from the synapse where it began<br>
                     Now far ahead the Thought has gone<br>
                     And I must follow, if I can,</i></h2>
-                <h2 style="margin-left: 20px;"><i>Pursue it with waining will, <br>
+                <h2 style="margin-left: 10px;"><i>Pursue it with waining will, <br>
                     Until it joins some larger plan. <br>
                     Where many ideas and projects meet. <br>
                     And whither then? I cannot say."</i></h2>
@@ -154,20 +156,52 @@
     </div>
 
 
-    <!-- <section id="blog" class="section">
-        <h2>Blog Posts</h2>
+    <div class="content-wrapper" style="display: flex; justify-content: space-between;">
+        <section id="blog" class="section" style="flex: 1; margin-right: 20px;">
+            <h2>Blog Posts</h2>
             <div class="blog-list">
                 <div class="blog-post">
-                <span class="blog-date">September 15, 2024</span> <a href="blog-posts/1.ello-traveler/ello-traveler.html" class="blog-title">Ello traveler</a>
-                <br>
-                <span class="blog-date">September 15, 2024</span> <a href="blog-posts/2.RLenv/RLenv.html" class="blog-title">Constructs of an RL env.</a>
-                <br>
-                <span class="blog-date">September 15, 2024</span> <a href="blog-posts/3.AddictionMetrics/AddictionMetrics.html" class="blog-title">Addiction Metrics</a>
-                <br>
-                <span class="blog-date">September 15, 2024</span> <a href="blog-posts/4.VSCodeEditorExtension/index.html" class="blog-title">VSCode Editor Extension</a>
-            </div>            
+                    <span class="blog-date">September 15, 2024</span> <a href="blog-posts/1.ello-traveler/index.html" class="blog-title">Ello traveler</a>
+                    <br>
+                    <span class="blog-date">September 15, 2024</span> <a href="blog-posts/2.RLenv/index.html" class="blog-title">Constructs of an RL env.</a>
+                    <br>
+                    <span class="series-date">October 1, 2024</span> 
+                    <div class="series-container">
+                        <a href="blog-series/mindful-tech/index.html" class="series-title">Mindful tech [Series of blogs]</a>
+                        <button class="expand-button">▼</button>
+                        <ul class="series-posts-list">
+                            <li><a href="blog-series/mindful-tech/index.html#post1">1. Introduction to Mindful Technology</a></li>
+                            <!-- <li><a href="blog-series/mindful-tech/index.html#post2">2. Digital Wellness Practices</a></li> -->
+                            <!-- <li><a href="blog-series/mindful-tech/index.html#post3">3. Building Healthy Tech Habits</a></li> -->
+                            <!-- Add more posts as needed -->
+                        </ul>
+                    </div>
+                </div>            
             </div>
-        </section> -->
+        </section>
+        <section id="essays" class="section" style="flex: 1;">
+            <h2>Essay Series</h2>
+            <div class="essay-list">
+                <div class="essay-post">
+                    
+                    <span class="essay-date">October 15, 2024</span> <a href="essays/AddictiveTech/index.html" class="essay-title">Virtuous Technology | Technology addiction</a> 
+                    <br>
+                    <!-- <span class="essay-date">November 1, 2024</span> <a href="essays/3.analysis/index.html" class="essay-title">In-depth Analysis</a>  -->
+                </div>            
+            </div>
+        </section>
+        <!-- <section id="series" class="section" style="flex: 1;">
+            <h2>Building Blog </h2>
+            <div class="series-list">
+                <div class="series-post">
+                    <br>
+                    <!-- <span class="essay-date">October 15, 2024</span> <a href="essays/2.topic-exploration/index.html" class="essay-title">Exploring Key Concepts</a>
+                    <br>
+                    <span class="essay-date">November 1, 2024</span> <a href="essays/3.analysis/index.html" class="essay-title">In-depth Analysis</a> -->
+                <!-- </div>            
+            </div>
+        </section> --> 
+    </div>
 
         <div id="projects" class="section">
             <h2>Pet Projects</h2>
@@ -189,7 +223,7 @@
                 <img class="project-img" src="https://gymnasium.farama.org/_images/ant.gif" alt="Honors Project" style="margin-right: 20px;">
                 <div id="honors" class="project-content">
                     <a  class="project-title">Honors Project with Dr. Ahmadzadeh (Aug 2023 - May 2024)</a>
-                    Collaborated with PhD student, trained and tested multi-agent reinforcement learning models. <a href="#cdc" class="paper-title">accepted into CDC apart of IEEE.</a> This work built upon several several previous works on discrete and continuous MARL domains. Comparing algorithms including: <a href="https://github.com/Hasenfus/TRPO-in-MARL" class="paper-title">HATRPO/HAPPO</a>, <a href="https://github.com/Hasenfus/Q-functionals" class="paper-title">Q-functionals</a>, and <a href="https://github.com/Hasenfus/maddpg" class="paper-title">MADDPG</a>.
+                    Collaborated with Yasin Findik PhD student, trained and tested multi-agent reinforcement learning models. <a href="#cdc" class="paper-title">accepted into CDC apart of IEEE.</a> This work built upon several previous works on discrete and continuous MARL domains. Comparing algorithms including: <a href="https://github.com/Hasenfus/TRPO-in-MARL" class="paper-title">HATRPO/HAPPO</a>, <a href="https://github.com/Hasenfus/Q-functionals" class="paper-title">Q-functionals</a>, and <a href="https://github.com/Hasenfus/maddpg" class="paper-title">MADDPG</a>.
                 </div>
             </div>
             <div class="project" style="display: flex; align-items: center;">
@@ -237,7 +271,23 @@
 
 
     <script>
-        // You can add any JavaScript here if needed
-    </script>
+// Add this to your existing JavaScript or create a new script
+document.addEventListener('DOMContentLoaded', function() {
+    const expandButtons = document.querySelectorAll('.expand-button');
+    
+    expandButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const postsList = this.nextElementSibling;
+            const isExpanded = postsList.classList.contains('expanded');
+            
+            // Toggle the expanded class
+            postsList.classList.toggle('expanded');
+            this.classList.toggle('expanded');
+            
+            // Update the button text/symbol
+            this.textContent = isExpanded ? '▼' : '▲';
+        });
+    });
+});    </script>
 </body>
 </html>

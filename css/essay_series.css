@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Custom DPSDbeyond Font */
+@font-face {
+    font-family: 'DPSDbeyond';
+    src: url('../fonts/DPSDbeyond.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Georgia, serif;
+    line-height: 1.5;
+    color: #1a1a1a;
+    background-color: #fdfdfd;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.content {
+    flex: 3;
+    padding-right: 0;
+    padding-bottom: 100px;
+    margin-bottom: 500px;
+    order: 1;
+}
+
+.citations {
+    flex: 0.8;
+    padding: 0 15px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    font-size: 0.85em;
+    order: 2;
+    position: relative;
+    overflow: hidden;
+}
+
+.citation-text {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    background-color: #f9f9f9;
+    padding: 8px;
+    font-size: 0.85em;
+    border-left: 2px solid #ccc;
+    
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    max-width: calc(100% - 30px);
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.table-of-contents {
+    flex: 1.2;
+    position: sticky;
+    top: 20px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    padding-left: 0;
+    order: 3;
+}
+
+.table-of-contents a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.table-of-contents .active {
+    color: #00FFFF;
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'DPSDbeyond', sans-serif;
+    margin-bottom: 15px;
+}
+
+.blog-post {
+    margin-bottom: 50px;
+    padding: 30px 0;
+    border-bottom: 1px solid #ccc;
+    background: none;
+    color: #1a1a1a;
+}
+
+.blog-post h2 {
+    font-family: Georgia, serif;
+    font-size: 1.8em;
+    color: #1a1a1a;
+    margin: 15px 0;
+}
+
+.post-meta {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.blog-date {
+    font-size: 1em;
+    color: #cccccc;
+    margin-right: 15px;
+}
+
+.blog-author {
+    font-size: 1.1em;
+    color: #ffffff;
+}
+
+.blog-author a {
+    color: #0000EE;
+    text-shadow: none;
+    text-decoration: none;
+}
+
+.blog-author a:hover {
+    text-decoration: underline;
+}
+
+.tags {
+    margin-top: 15px;
+}
+
+.tags ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tags li {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.tags li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.tags li a:hover {
+    text-decoration: underline;
+}
+
+.post-navigation {
+    margin-top: 30px;
+    padding-top: 15px;
+}
+
+.prev-post, .next-post {
+    color: #3498db;
+    text-shadow: none;
+}
+
+.prev-post:hover, .next-post:hover {
+    text-decoration: underline;
+}
+
+.left-quote {
+    border-left: 4px solid #ccc;
+    margin-left: 0;
+    padding-left: 25px;
+}
+
+.citation-text {
+    background-color: #f9f9f9;
+    color: #1a1a1a;
+    font-size: 0.85em;
+    padding: 8px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .table-of-contents, .citations {
+        position: static;
+        width: 100%;
+        margin-bottom: 30px;
+        border-right: none;
+    }
+}
+
+.toc-level-h1 { margin-left: 0; }
+.toc-level-h2 { margin-left: 1em; }
+.toc-level-h3 { margin-left: 2em; }
+.toc-level-h4 { margin-left: 3em; }
+.toc-level-h5 { margin-left: 4em; }
+.toc-level-h6 { margin-left: 5em; }
+
+.citation-text {
+    position: absolute;
+    right: 0;
+    width: 300px;
+    padding: 10px;
+    background: #fff;
+    border-left: 2px solid #ccc;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.table-of-contents {
+    position: sticky;
+    top: 20px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+}
+
+.table-of-contents a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 4px 0;
+}
+
+.table-of-contents a.active {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.table-of-contents li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+

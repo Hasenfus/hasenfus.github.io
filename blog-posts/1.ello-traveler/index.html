@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ello traveler - Hunter Hasenfus</title>
+    <link rel="stylesheet" href="/css/blog_styles.css"> <!-- Link to your main CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Ello traveler</h1>
+        <p class="blog-date">September 15, 2024</p>
+        <div class="blog-content">
+            Wild times we live in aren't they? It certainly feels that way. 
+            
+            <br><br>
+            Welcome to my exploration of the thought space and my surfing of the knowledge manifold. 
+            
+            To begin my exploration I would like to understand and conceptualize a question that brought me both immense delight and bewilderment when stumbling upon it during my study of reinforcement learning. 
+
+            <br><br>
+
+            Reinforcement learning, a subset of machine learning that focuses on training a model through interacting with an environment. During the study and research of such a subject, one begins to train agents to interact with various environments. The environments range from tictactoe to atari, and throughout, one gets a fuzzy awareness of the notions of fixedness in the given domain. The environments are all relative sandboxes. They have clear edges. They have defined objectives. In many, there is a win or lose condition. The way the agent learns is through a given reward function. 
+            <p>The reward function in reinforcement learning is typically represented mathematically as:</p>
+
+            <p>\[R: S \times A \times S' \rightarrow \mathbb{R}\]</p>
+
+            <p>Where:</p>
+            <ul>
+                <li>\(S\) is the current state</li>
+                <li>\(A\) is the action taken</li>
+                <li>\(S'\) is the next state</li>
+                <li>\(\mathbb{R}\) is the set of real numbers, representing the reward</li>
+            </ul>
+
+            <p>This function maps the transition from one state to another, given an action, to a numerical reward. The agent's goal is to maximize the cumulative reward over time, often expressed as:</p>
+
+            <p>\[G_t = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + ... = \sum_{k=0}^{\infty} \gamma^k R_{t+k+1}\]</p>
+
+            <p>Where \(G_t\) is the total discounted reward from time step \(t\), \(R_t\) is the reward at time \(t\), and \(\gamma\) is the discount factor (0 ≤ \(\gamma\) ≤ 1).</p>
+
+            <p>This mathematical framework provides a clear objective for the agent, but when one ponders like I did on that sunny summer afternoon, whats the reward function for an open game, like life? How does one learn a reward function? How does one know if their given reward function is good? How does the reward function evolve? 
+
+            </p>
+            
+            Seeking to find meaning in the chaos. Pondering this rather technical question has largely surfaced philosophical notions that humanity seems to grasp ever so tightly. I find that interaction with the world around me is the best way to do so. Such a perspective has been born out of particular curiosities surrounding learning paradigms, intelligent agents, games, and Jean Paul Sartre.
+
+            <br><br>
+            Jean Paul Sarte's exploration of existential ontology fermented the concept of 'Existence precedes essence'; in some sense pointing to the idea that humans are not born with predetermined nature, but they derive such meaning through actions and choices. 
+            <br><br>
+            
+            It is a rather curious notion that both our collective and our individual selves, each have a reward function that dynamically evolves in a non concave way. [Concavity with reference to optimization that procedes indefinitely with a monotonous nature.] Our lives are peaks and troughs, both poetically and differentially, our meaning very much relative to the local optima problem of objective function optimization. I plan to pursue this question and many like it in the posts to come. I plan to chart out notation, wrestle with philosophical paradoxes, and build technology that is at the heart of my natural curiosities.
+
+            <br><br>
+
+            We shall see how this goes...
+
+            
+        </div>
+
+        <a href="/index.html" class="back-link">Back to main page</a>
+        <div id="tags"></div>
+        <ul id="taggedPosts"></ul>
+    </div>
+    <script>
+        
+        const postTags = [];
+
+        // Function to get the tag from the URL
+        function getTagFromUrl() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('tag');
+        }
+
+        function generateTags() {
+            const tagsContainer = document.getElementById('tags');
+            postTags.forEach(tag => {
+                const tagLink = document.createElement('a');
+                tagLink.href = `tags.html?tag=${tag}`;
+                tagLink.classList.add('tag');
+                tagLink.textContent = tag;
+                tagsContainer.appendChild(tagLink);
+            });
+        }
+
+        // Function to display posts with the current tag
+        function displayTaggedPosts(tag) {
+            const currentTag = document.getElementById('currentTag');
+            const taggedPosts = document.getElementById('taggedPosts');
+            
+            currentTag.textContent = tag;
+
+            // This is where you'd typically fetch posts with this tag from a database
+            // For demonstration, we'll use a hardcoded list
+            const posts = [
+                { title: 'Sample Post 1', url: 'post1.html' },
+                { title: 'Sample Post 2', url: 'post2.html' },
+                // Add more posts here
+            ];
+
+            posts.forEach(post => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = post.url;
+                a.textContent = post.title;
+                li.appendChild(a);
+                taggedPosts.appendChild(li);
+            });
+        }
+
+        // Get the tag and display posts
+        generateTags();
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/js/quote.js"></script>
+</body>
+</html>
