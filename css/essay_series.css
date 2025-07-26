@@ -273,4 +273,70 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
 }
 
+/* Claude Response Boxes */
+.claude-response {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-left: 4px solid #007bff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    margin-left: 20%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    font-style: italic;
+    color: #495057;
+}
+
+.claude-response::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -8px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #007bff;
+}
+
+.claude-response h4,
+.claude-response h5,
+.claude-response h6 {
+    color: #007bff;
+    font-style: normal;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.claude-response p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.claude-response ul,
+.claude-response ol {
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.claude-response li {
+    margin-bottom: 8px;
+}
+
+/* Mobile responsive adjustments for Claude boxes */
+@media (max-width: 768px) {
+    .claude-response {
+        margin-left: 10%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .claude-response {
+        margin-left: 5%;
+        padding: 12px;
+        font-size: 0.95em;
+    }
+}
+
 
