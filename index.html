@@ -66,9 +66,11 @@
         <section id="timeline" class="section">
 <!--             <h2>Professional and Academic Timeline</h2> -->
             <div class="timeline">
+                
+                <!-- Current Position -->
                 <div class="timeline-container">
                     <div class="timespan">Sep 2023 - present</div>
-                                        <div class="ico">
+                    <div class="ico">
                         <img src="tt.png" alt="Ticket Tree">
                     </div>
                     <div class="content">
@@ -77,82 +79,74 @@
                             Building an on-chain <a href="https://tick3ttree.com/" target="_blank">ticketing system</a>, memorializing experiences, providing verification, decentralization, and a better relationship between organizations and their fans.
                         </div>
                     </div>
-
                 </div>
 
+                <!-- University Period with Nested Items -->
                 <div class="timeline-container">
                     <div class="timespan">2021 - 2024</div>
-                                        <div class="ico">
+                    <div class="ico">
                         <img src="uml.png" alt="UMass Lowell">
                     </div>
                     <div class="content">
                         <div class="desc">
-                            <strong>University of Massachusetts: Lowell</strong><br> During my time at UMass Lowell, I pursued a dual degree in Mathematics and Computer Science. The intersection of these fields is what sparked my interest in machine learning and mathematics. I began with curiosity within interpretability research using Topological Data Analysis and pursued this into a <a href="#tda">research</a> assistant position with Dr. Tibor Beke. I then began working with Dr. Ahmadzadeh on <a href="#honors">multi-agent reinforcement learning</a> and persistent autonomy in robotics. I am very curious about agents and their interaction with the world.
-
+                            <strong>University of Massachusetts: Lowell</strong><br> 
+                            During my time at UMass Lowell, I pursued a dual degree in Mathematics and Computer Science. The intersection of these fields is what sparked my interest in machine learning and mathematics. I began with curiosity within interpretability research using Topological Data Analysis and pursued this into a <a href="#tda">research</a> assistant position with Dr. Tibor Beke. I then began working with Dr. Ahmadzadeh on <a href="#honors">multi-agent reinforcement learning</a> and persistent autonomy in robotics. I am very curious about agents and their interaction with the world.
                         </div>
-                    </div>
+                        
+                        <!-- Nested timeline for university period -->
+                        <div class="nested-timeline">
+                            
+                            <div class="nested-item">
+                                <div class="nested-timespan">Aug 2023 - May 2024</div>
+                                <div class="nested-ico">
+                                    <img src="pearl.png" alt="UML">
+                                </div>
+                                <div class="nested-desc">
+                                    <strong>Research Assistant, UML Pearl Lab</strong><br>
+                                    Trained and analyzed open-source multi-agent reinforcement learning algorithms focused on persistent autonomy in robotics with Pytorch and Tensorflow.
+                                </div>
+                            </div>
 
-                </div>
+                            <div class="nested-item">
+                                <div class="nested-timespan">Jun 2023 - Aug 2023</div>
+                                <div class="nested-ico">
+                                    <img src="nin.png" alt="DoD">
+                                </div>
+                                <div class="nested-desc">
+                                    <strong>Machine Learning Engineer, DoD NSIN X-Force</strong><br>
+                                    Assigned to Georgia Tech Research Institute: CIPHER Division as part of Department of Defense - National Security Innovation Network's X-Force Program. [Deep learning, Graph neural networks]
+                                    <!-- <a href="/projects/dod-xforce" class="project-link">Learn More</a> -->
+                                </div>
+                            </div>
 
-                <div class="timeline-container">
-                    <div class="content">
-                        <div class="timespan">Aug 2023 - May 2024</div>
-                        <div class="ico">
-                            <img src="pearl.png" alt="UML">
-                        </div>
-                        <div class="desc">
-                            <strong>Research Assistant, UML Pearl Lab </strong><br>
-                            Trained and analyzed open-source multi-agent reinforcement learning algorithms focused on persistent autonomy in robotics with Pytorch and Tensorflow.
-                        </div>
-                    </div>
-                </div>
+                            <div class="nested-item">
+                                <div class="nested-timespan">Sept 2022 - May 2023</div>
+                                <div class="nested-ico">
+                                    <img src="se.png" alt="Schneider Electric">
+                                </div>
+                                <div class="nested-desc">
+                                    <strong>Software Project for Schneider Electric</strong><br>
+                                    Researched cryptographic algorithms, analyzed secure communication on Secure Element with Raspberry Pi, and tested methods on the company's control system units.
+                                    <!-- <a href="/projects/schneider-electric" class="project-link">Learn More</a> -->
+                                </div>
+                            </div>
 
-
-                <div class="timeline-container">
-                    <div class="timespan">Jun 2023 - Aug 2023</div>
-                                        <div class="ico">
-                        <img src="nin.png" alt="DoD">
-                    </div>
-                    <div class="content">
-                        <div class="desc">
-                            <strong>Machine Learning Engineer, DoD NSIN X-Force</strong><br>
-                            Assigned to Georgia Tech Research Institute: CIPHER Division as part of Department of Defense - National Security Innovation Network's X-Force Program. [Deep learning, Graph neural networks]
-                            <!-- <a href="/projects/dod-xforce" class="project-link">Learn More</a> -->
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="timeline-container">
-                    <div class="timespan">Sept 2022 - May 2023</div>
-                                        <div class="ico">
-                        <img src="se.png" alt="Schneider Electric">
-                    </div>
-                    <div class="content">
-                        <div class="desc">
-                            <strong>Software Project for Schneider Electric</strong><br>
-                            Researched cryptographic algorithms, analyzed secure communication on Secure Element with Raspberry Pi, and tested methods on the company's control system units.
-                            <!-- <a href="/projects/schneider-electric" class="project-link">Learn More</a> -->
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="timeline-container">
-                    <div class="timespan">Aug 2022 - Apr 2023</div>
-                                        <div class="ico">
-                        <img src="uml.png" alt="Honors Fellowship">
-                    </div>
-                    <div class="content">
-                        <div class="desc">
-                            <strong>Honors Fellowship, Dr. Wang</strong><br>
-                            Utilized mixture models in conjunction with supervised learning models for predictive modeling of mental health.
-                            <!-- <a href="/projects/honors-fellowship" class="project-link">Learn More</a> -->
+                            <div class="nested-item">
+                                <div class="nested-timespan">Aug 2022 - Apr 2023</div>
+                                <div class="nested-ico">
+                                    <img src="uml.png" alt="Honors Fellowship">
+                                </div>
+                                <div class="nested-desc">
+                                    <strong>Honors Fellowship, Dr. Wang</strong><br>
+                                    Utilized mixture models in conjunction with supervised learning models for predictive modeling of mental health.
+                                    <!-- <a href="/projects/honors-fellowship" class="project-link">Learn More</a> -->
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
 
-                
             </div>
         </section>
     </div>

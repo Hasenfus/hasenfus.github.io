@@ -20,6 +20,8 @@
     bottom: 0;
     left: 160px; /* Adjusted to place line between dates and images */
 }
+
+/* Main timeline items */
 .timeline-container {
     position: relative;
     margin-bottom: 30px;
@@ -29,13 +31,43 @@
 .timeline-container::before {
     content: '';
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     background-color: #ca7608;
     border-radius: 50%;
     left: -66px; /* Adjusted to align with the vertical line */
     top: 5px;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px #ca7608;
 }
+
+/* Nested timeline for subitems */
+.nested-timeline {
+    position: relative;
+    margin-top: 15px;
+    padding-left: 40px;
+    border-left: 2px solid #ddd;
+}
+
+.nested-item {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.nested-item::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #3498db;
+    border-radius: 50%;
+    left: -25px;
+    top: 5px;
+    border: 2px solid #fff;
+}
+
 .timespan {
     position: absolute;
     left: -270px;
@@ -44,24 +76,50 @@
     font-weight: bold;
     color: #2c3e50;
 }
+
+.nested-timespan {
+    position: absolute;
+    left: -180px;
+    width: 140px;
+    text-align: right;
+    font-weight: normal;
+    color: #555;
+    font-size: 0.9em;
+}
+
 .ico {
     position: absolute;
     left: -50px; /* Positioned between the line and text */
     top: 0;
     width: 50px; /* Reduced width for smaller images */
 }
-.ico img {
+
+.nested-ico {
+    position: absolute;
+    left: -45px;
+    top: 0;
+    width: 35px;
+}
+
+.ico img, .nested-ico img {
     width: 100%;
     height: auto;
     display: block;
     border-radius: 10px; /* Added rounded corners to images */
 }
+
 .content {
     flex-grow: 1;
 }
 .desc {
     margin-left: 10px; /* Small margin to separate from images */
 }
+
+.nested-desc {
+    margin-left: 5px;
+    font-size: 0.95em;
+}
+
 .project-link {
     display: inline-block;
     margin-top: 10px;
@@ -234,17 +292,37 @@
         margin-bottom: 5px;
         left: 0;
     }
+    .nested-timespan {
+        position: static;
+        width: auto;
+        text-align: left;
+        margin-bottom: 3px;
+    }
     .ico {
         position: static;
         width: 40px;
         margin-bottom: 5px;
     }
-    .ico img {
+    .nested-ico {
+        position: static;
+        width: 35px;
+        margin-bottom: 5px;
+    }
+    .ico img, .nested-ico img {
         width: 40px;
         height: auto;
     }
     .desc {
         margin-left: 0;
+    }
+    .nested-desc {
+        margin-left: 0;
+    }
+    .nested-timeline {
+        padding-left: 20px;
+    }
+    .nested-item::before {
+        left: -12px;
     }
     .content-wrapper {
         flex-direction: column;
@@ -290,7 +368,10 @@
     .ico {
         width: 30px;
     }
-    .ico img {
+    .nested-ico {
+        width: 25px;
+    }
+    .ico img, .nested-ico img {
         width: 30px;
     }
     .project-img {
@@ -315,6 +396,12 @@
     }
     .expand-button {
         font-size: 1em;
+    }
+    .nested-timeline {
+        padding-left: 15px;
+    }
+    .nested-item::before {
+        left: -8px;
     }
 }
 
