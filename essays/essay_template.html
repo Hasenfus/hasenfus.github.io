@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{ESSAY_TITLE}</title>
+    <meta name="description" content="{ESSAY_DESCRIPTION}">
+    <meta name="author" content="{AUTHOR_NAME}">
+    <link rel="stylesheet" href="/css/essay.css">
+</head>
+<body>
+    <article class="essay">
+        <header>
+            <h1>{ESSAY_TITLE}</h1>
+            <div class="metadata">
+                <time datetime="{ISO_DATE}">{FORMATTED_DATE}</time>
+                <span class="author">{AUTHOR_NAME}</span>
+            </div>
+        </header>
+
+        <section class="introduction">
+            <h2>Introduction</h2>
+            <p>
+                {INTRODUCTION_TEXT}
+            </p>
+        </section>
+
+        <section class="main-content">
+            <h2>{SECTION_TITLE}</h2>
+            <p>
+                {SECTION_CONTENT}
+            </p>
+            
+            <!-- Add more sections as needed -->
+            <section>
+                <h3>{SUBSECTION_TITLE}</h3>
+                <p>{SUBSECTION_CONTENT}</p>
+            </section>
+        </section>
+
+        <section class="key-points">
+            <h2>Key Takeaways</h2>
+            <ul>
+                <li>{KEY_POINT_1}</li>
+                <li>{KEY_POINT_2}</li>
+                <li>{KEY_POINT_3}</li>
+            </ul>
+        </section>
+
+        <section class="citations">
+            <h2>References</h2>
+            <div class="citation" id="cite1">
+                <sup>1</sup> {AUTHOR}. ({YEAR}). <em>{TITLE}</em>. {SOURCE}
+            </div>
+            <!-- Add more citations as needed -->
+        </section>
+    </article>
+
+    <nav class="series-navigation">
+        <a href="{PREV_ESSAY_LINK}" class="prev-essay">← Previous Essay</a>
+        <a href="{NEXT_ESSAY_LINK}" class="next-essay">Next Essay →</a>
+    </nav>
+
+    <script src="/js/essay.js"></script>
+</body>
+</html> 

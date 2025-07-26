@@ -195,3 +195,130 @@
 .series-posts-list a:hover {
     color: #00FFFF;
 }
+
+/* Responsive Design for Mobile and Tablet */
+@media (max-width: 900px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+    #dhead {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0;
+    }
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .timeline {
+        padding-left: 40px;
+    }
+    .timeline::before {
+        left: 10px;
+    }
+    .timeline-container {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 40px;
+    }
+    .timeline-container::before {
+        left: -16px;
+    }
+    .timespan {
+        position: static;
+        width: auto;
+        text-align: left;
+        margin-bottom: 5px;
+        left: 0;
+    }
+    .ico {
+        position: static;
+        width: 40px;
+        margin-bottom: 5px;
+    }
+    .ico img {
+        width: 40px;
+        height: auto;
+    }
+    .desc {
+        margin-left: 0;
+    }
+    .content-wrapper {
+        flex-direction: column;
+        margin-right: 0;
+    }
+    #blog, #essays {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    .project {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .project-img {
+        width: 80px !important;
+        height: 80px !important;
+        margin-right: 0 !important;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+        padding: 0;
+    }
+    .container {
+        padding: 5px;
+    }
+    h1, h2, h3 {
+        font-size: 1.2em;
+    }
+    .profile-pic {
+        width: 60px;
+        height: 60px;
+    }
+    .timeline {
+        padding-left: 20px;
+    }
+    .timeline::before {
+        left: 5px;
+    }
+    .ico {
+        width: 30px;
+    }
+    .ico img {
+        width: 30px;
+    }
+    .project-img {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    .blog-title {
+        font-size: 1em;
+    }
+    .series-title {
+        font-size: 1em;
+    }
+    .essay-title {
+        font-size: 1em;
+    }
+    .section {
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+    .blog-list, .essay-list {
+        padding: 0;
+    }
+    .expand-button {
+        font-size: 1em;
+    }
+}
+
+/* Smooth transitions for UI elements */
+.expand-button, .series-posts-list {
+    transition: all 0.3s ease;
+}

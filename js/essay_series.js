@@ -42,9 +42,10 @@ document.addEventListener('DOMContentLoaded', async (event) => {
     function initializeEssayFeatures() {
         const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
         const tocLinks = [];
-
+        
         // Clear existing TOC
-        toc.innerHTML = '';
+        toc.innerHTML = '<h2>Contents</h2><ul></ul>';
+        const tocList = toc.querySelector('ul');
 
         // Generate table of contents and prepare headings
         headings.forEach((heading, index) => {
@@ -53,11 +54,10 @@ document.addEventListener('DOMContentLoaded', async (event) => {
             link.textContent = heading.textContent;
             link.href = `#heading-${index}`;
             
-            // Add appropriate indentation based on heading level
             const li = document.createElement('li');
             li.classList.add(`toc-level-${heading.tagName.toLowerCase()}`);
             li.appendChild(link);
-            toc.appendChild(li);
+            tocList.appendChild(li);
             tocLinks.push(link);
 
             // Set heading ID
@@ -100,41 +100,64 @@ document.addEventListener('DOMContentLoaded', async (event) => {
             });
         });
 
-        // Update TOC and citations on scroll
         function updateTOCAndCitations() {
-            let currentSection = '';
-            const scrollPosition = window.scrollY + 50; // Offset for header
+            const scrollPosition = window.scrollY;
+            const viewportHeight = window.innerHeight;
+            const scrollThreshold = 100; // Pixels from top of viewport
 
-            // Find current section
-            headings.forEach((heading, index) => {
-                if (heading.offsetTop <= scrollPosition) {
-                    currentSection = `#heading-${index}`;
+            // Find the heading that's currently in view
+            let activeHeading = null;
+            let minDistance = Infinity;
+
+            headings.forEach((heading) => {
+                const rect = heading.getBoundingClientRect();
+                const distanceFromThreshold = rect.top - scrollThreshold;
+                
+                // Consider headings that are above or slightly below the threshold
+                if (distanceFromThreshold <= 0) {
+                    // Find the heading closest to the threshold
+                    if (Math.abs(distanceFromThreshold) < minDistance) {
+                        minDistance = Math.abs(distanceFromThreshold);
+                        activeHeading = heading;
+                    }
                 }
             });
 
             // Update TOC highlighting
             tocLinks.forEach(link => {
-                link.classList.toggle('active', link.getAttribute('href') === currentSection);
+                link.classList.remove('active');
+                if (activeHeading && link.getAttribute('href') === `#${activeHeading.id}`) {
+                    link.classList.add('active');
+                }
             });
 
-            // Update citation visibility and positions
+            // Update citations visibility
             const citations = document.querySelectorAll('.citation');
             const containerRect = citationsColumn.getBoundingClientRect();
             
             citations.forEach((citation, index) => {
                 const citationText = document.getElementById(`citation-${index}`);
-                const rect = citation.getBoundingClientRect();
-                const relativeTop = rect.top - containerRect.top;
-                
-                citationText.style.top = `${relativeTop}px`;
-                
-                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-                citationText.style.opacity = isVisible ? '1' : '0';
+                if (citationText) {
+                    const rect = citation.getBoundingClientRect();
+                    const relativeTop = rect.top - containerRect.top;
+                    
+                    citationText.style.top = `${relativeTop}px`;
+                    citationText.style.opacity = (rect.top < viewportHeight && rect.bottom > 0) ? '1' : '0';
+                }
             });
         }
 
-        // Add scroll event listener
-        window.addEventListener('scroll', updateTOCAndCitations);
+        // Add scroll event listener with throttling
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    updateTOCAndCitations();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
 
         // Initial update
         updateTOCAndCitations();

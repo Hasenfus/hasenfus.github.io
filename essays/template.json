@@ -1,0 +1,26 @@
+{
+    "series_title": "{SERIES_TITLE}",
+    "series_description": "{SERIES_DESCRIPTION}",
+    "author": "{AUTHOR_NAME}",
+    "date_started": "YYYY-MM-DD",
+    "essays": [
+        {
+            "filename": "1.intro.html",
+            "title": "Introduction",
+            "description": "Brief overview of the series",
+            "date": "YYYY-MM-DD"
+        },
+        {
+            "filename": "2.topic.html",
+            "title": "Main Topic",
+            "description": "Detailed exploration of the main topic",
+            "date": "YYYY-MM-DD"
+        }
+    ],
+    "tags": [
+        "tag1",
+        "tag2",
+        "tag3"
+    ],
+    "status": "in-progress"
+} 
